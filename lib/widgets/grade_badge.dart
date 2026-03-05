@@ -26,7 +26,7 @@ class GradeBadge extends StatelessWidget {
       width: size * 1.6,
       height: size,
       decoration: BoxDecoration(
-        color: color.withOpacity(0.15),
+        color: color.withValues(alpha: 0.15),
         borderRadius: BorderRadius.circular(8),
         border: Border.all(color: color, width: 1.5),
       ),
