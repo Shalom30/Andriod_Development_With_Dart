@@ -1,0 +1,43 @@
+name: grade_vault
+description: A stunning student grade management desktop application.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Excel reading and writing
+  excel: ^4.0.6
+
+  # PDF generation
+  pdf: ^3.10.8
+  printing: ^5.12.0
+
+  # File picker dialog (for opening Excel files)
+  file_picker: ^8.0.3
+
+  # Save file dialog (for saving output)
+  path_provider: ^2.1.3
+
+  # Icons
+  flutter_animate: ^4.5.0
+
+  # Google Fonts for stunning typography
+  google_fonts: ^6.2.1
+
+  # Lottie animations
+  lottie: ^3.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
