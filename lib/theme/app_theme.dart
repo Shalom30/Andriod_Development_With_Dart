@@ -1,8 +1,5 @@
 // ============================================================
 //  FILE: lib/theme/app_theme.dart
-//
-//  All colours, text styles and decoration are centralised
-//  here so the rest of the app stays clean.
 // ============================================================
 
 import 'package:flutter/material.dart';
@@ -10,14 +7,14 @@ import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
   // ── Colour palette ─────────────────────────────────────────
-  static const Color bg          = Color(0xFF0D0D1A); // deep navy-black
-  static const Color surface     = Color(0xFF1A1A2E); // card background
-  static const Color surfaceAlt  = Color(0xFF16213E); // slight variant
-  static const Color accent      = Color(0xFF6C63FF); // vivid purple
-  static const Color accentLight = Color(0xFF9D97FF); // lighter purple
-  static const Color gold        = Color(0xFFFFD700); // grade highlight
-  static const Color success     = Color(0xFF2ECC71); // pass colour
-  static const Color danger      = Color(0xFFE74C3C); // fail colour
+  static const Color bg          = Color(0xFF0D0D1A);
+  static const Color surface     = Color(0xFF1A1A2E);
+  static const Color surfaceAlt  = Color(0xFF16213E);
+  static const Color accent      = Color(0xFF6C63FF);
+  static const Color accentLight = Color(0xFF9D97FF);
+  static const Color gold        = Color(0xFFFFD700);
+  static const Color success     = Color(0xFF2ECC71);
+  static const Color danger      = Color(0xFFE74C3C);
   static const Color textPrimary = Color(0xFFEAEAFF);
   static const Color textSecond  = Color(0xFF9B9BC8);
   static const Color divider     = Color(0xFF2A2A4A);
@@ -76,6 +73,7 @@ class AppTheme {
       );
 
   // ── MaterialTheme ────────────────────────────────────────────
+  // FIX: use CardThemeData instead of CardTheme
   static ThemeData get theme => ThemeData(
         useMaterial3: true,
         scaffoldBackgroundColor: bg,
@@ -87,7 +85,7 @@ class AppTheme {
         ),
         textTheme: textTheme,
         dividerColor: divider,
-        cardTheme: CardTheme(
+        cardTheme: CardThemeData(
           color: surface,
           elevation: 0,
           shape: RoundedRectangleBorder(
