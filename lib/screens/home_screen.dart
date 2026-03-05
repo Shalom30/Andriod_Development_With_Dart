@@ -9,7 +9,7 @@
 //                 assigned once the user picks a file.
 // ============================================================
 
-import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -208,12 +208,12 @@ class _HomeScreenState extends State<HomeScreen> {
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
           color: _filePath != null
-              ? AppTheme.accent.withOpacity(0.5)
+              ? AppTheme.accent.withValues(alpha: 0.5)
               : AppTheme.divider,
         ),
         boxShadow: [
           BoxShadow(
-            color: AppTheme.accent.withOpacity(0.06),
+            color: AppTheme.accent.withValues(alpha: 0.06),
             blurRadius: 30,
             offset: const Offset(0, 8),
           ),
@@ -336,9 +336,9 @@ class _HomeScreenState extends State<HomeScreen> {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: AppTheme.danger.withOpacity(0.12),
+        color: AppTheme.danger.withValues(alpha: 0.12),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: AppTheme.danger.withOpacity(0.4)),
+        border: Border.all(color: AppTheme.danger.withValues(alpha: 0.4)),
       ),
       child: Row(
         children: [
@@ -406,7 +406,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   width: 32,
                   height: 32,
                   decoration: BoxDecoration(
-                    color: AppTheme.accent.withOpacity(0.15),
+                    color: AppTheme.accent.withValues(alpha: 0.15),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   alignment: Alignment.center,
@@ -486,9 +486,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: const EdgeInsets.symmetric(
                     horizontal: 14, vertical: 10),
                 decoration: BoxDecoration(
-                  color: b.$4.withOpacity(0.1),
+                  color: b.$4.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: b.$4.withOpacity(0.4)),
+                  border: Border.all(color: b.$4.withValues(alpha: 0.4)),
                 ),
                 child: Column(
                   children: [
