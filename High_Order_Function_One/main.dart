@@ -1,5 +1,3 @@
-import 'dart:io';
-
 List<int> processList(List<int> numbers, bool Function(int) predicate) {
   return numbers.where(predicate).toList();
 }
